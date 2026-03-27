@@ -7,7 +7,8 @@ This project uses [uv](https://docs.astral.sh/uv/) for environment and dependenc
 ```bash
 git clone https://github.com/berkerb/bonmark.git
 cd bonmark
-uv sync          # creates .venv and installs the package in editable mode
+uv sync                   # creates .venv and installs the package + dev deps
+uv run pre-commit install # install git hooks
 bonmark bookmarks.html
 ```
 
@@ -18,6 +19,20 @@ python bonmark.py bookmarks.html
 ```
 
 If you don't have uv: `pip install uv` or see the [uv install guide](https://docs.astral.sh/uv/getting-started/installation/).
+
+## Code quality
+
+This project uses [Ruff](https://docs.astral.sh/ruff/) for linting and formatting. Pre-commit hooks run it automatically on every commit.
+
+To run manually:
+
+```bash
+uv run ruff check .        # lint
+uv run ruff format .       # format
+uv run ruff check --fix .  # lint + auto-fix
+```
+
+CI runs the same checks on every PR and will block merging if they fail.
 
 ## Branching strategy
 

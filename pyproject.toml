@@ -31,3 +31,19 @@ bonmark = "bonmark:main"
 Homepage = "https://github.com/berkerb/bonmark"
 Changelog = "https://github.com/berkerb/bonmark/blob/master/CHANGELOG.md"
 Issues = "https://github.com/berkerb/bonmark/issues"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=3.5.0",
+    "ruff>=0.15.8",
+]
+
+[tool.ruff]
+target-version = "py38"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["bonmark"]

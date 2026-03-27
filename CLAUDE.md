@@ -44,3 +44,10 @@ ts = datetime.now().strftime('%Y%m%d_%H%M%S')
 out_path = f"{os.path.splitext(input_path)[0]}_{ts}.html"
 ```
 Do not re-append a timestamp if the input filename already ends in `_yyyyMMdd` or `_yyyyMMdd_HHmmss`.
+
+## Testing
+- Always write tests alongside implementation; no PR should be opened until all tests pass.
+- Run tests with: `uv run python -m unittest discover -s tests -v`
+- Test files live in `tests/` and follow the `test_*.py` naming convention.
+- Use stdlib `unittest` only — no pytest or other test dependencies.
+- See [`docs/testing.md`](docs/testing.md) for the planned smoke test spec.

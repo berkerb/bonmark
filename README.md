@@ -46,13 +46,17 @@ See `bonmark --help` for the full flag reference.
 
 ## Status
 
-> ⚠️ Work in progress — implementation not yet started.
+> Work in progress — implementation not yet started.
 
 ---
 
 ## Contributing
 
-*Coming soon.*
+See [CONTRIBUTING.md](CONTRIBUTING.md). Bug reports and feature requests welcome via [GitHub Issues](https://github.com/berkerb/bonmark/issues).
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md).
 
 ---
 

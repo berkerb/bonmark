@@ -14,6 +14,9 @@ venv/
 # bonmark temp files
 bonmark_urlcheck_*.tmp
 
+# Claude Code local settings
+.claude/
+
 # OS
 .DS_Store
 Thumbs.db

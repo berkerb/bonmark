@@ -2,20 +2,22 @@
 
 ## Setup
 
-No install needed for development — just clone and run directly:
+This project uses [uv](https://docs.astral.sh/uv/) for environment and dependency management.
 
 ```bash
 git clone https://github.com/berkerb/bonmark.git
 cd bonmark
+uv sync          # creates .venv and installs the package in editable mode
+bonmark bookmarks.html
+```
+
+No install needed either — you can also run directly:
+
+```bash
 python bonmark.py bookmarks.html
 ```
 
-For the pip-installable entry point, install in editable mode:
-
-```bash
-pip install -e .
-bonmark bookmarks.html
-```
+If you don't have uv: `pip install uv` or see the [uv install guide](https://docs.astral.sh/uv/getting-started/installation/).
 
 ## Branching strategy
 
@@ -74,7 +76,7 @@ This project uses [Conventional Commits](https://www.conventionalcommits.org/):
 Tests are not yet implemented. When added, run with:
 
 ```bash
-python -m pytest
+uv run pytest
 ```
 
 ## Reporting bugs

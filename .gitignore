@@ -1,0 +1,22 @@
+# Personal bookmark files — never commit these
+*.html
+!.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# bonmark temp files
+bonmark_urlcheck_*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Config with personal settings (users keep their own)
+.bonmarkrc

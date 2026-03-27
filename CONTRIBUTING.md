@@ -17,12 +17,37 @@ pip install -e .
 bonmark bookmarks.html
 ```
 
+## Branching strategy
+
+This project uses [GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow). `master` is always releasable and protected — all changes go through a branch and PR.
+
+### Branch naming
+
+Branch names mirror the conventional commit prefix:
+
+| Branch pattern | Use for |
+|---|---|
+| `feat/<short-description>` | New feature or subcommand |
+| `fix/<short-description>` | Bug fix |
+| `docs/<short-description>` | Documentation only |
+| `chore/<short-description>` | Maintenance (deps, CI, config) |
+| `refactor/<short-description>` | Refactoring |
+
+Example: a `feat: add regroup subcommand` commit lives on a `feat/regroup-subcommand` branch.
+
+Delete branches after merging.
+
+### Releases
+
+Releases are tagged directly on `master` using SemVer: `v0.1.0`, `v0.2.0`, etc. The tag message matches the CHANGELOG entry for that version.
+
 ## Workflow
 
-1. Fork the repo and create a branch from `master`
+1. Branch from `master` using the naming convention above
 2. Make your changes
 3. Commit using [Conventional Commits](#commit-style)
-4. Open a pull request
+4. Open a pull request into `master`
+5. Delete the branch after merge
 
 ## Commit style
 
